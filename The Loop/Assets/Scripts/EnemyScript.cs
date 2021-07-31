@@ -11,17 +11,19 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float firerate;
     float firerateTimmer = 0f;
-    [SerializeField] GameObject bullet;
-
-    [Header("Enemy Type")]
-    [SerializeField] bool isShootie;
-    [SerializeField] bool isChasie;
+    
 
     [Header("Enemy AI")]
-    [SerializeField] bool isAggro = false;
+    [SerializeField] bool isShootie;
+    [SerializeField] bool isChasie;
     [SerializeField] float searchDistance;
     [SerializeField] float attackDistance;
 
+    [Header("Other")]
+    [SerializeField] GameObject bullet;
+    public CameraShake cameraShake;
+
+    bool isAggro = false;
     bool reset = false;
     Vector3 startPos;
     Vector3 startRot;
@@ -34,6 +36,7 @@ public class EnemyScript : MonoBehaviour
         startRot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
 
         player = FindObjectOfType<PlayerAbilities>();
+        cameraShake = FindObjectOfType<CameraShake>();
         currentHealth = maxHealth;
     }
 
@@ -83,8 +86,7 @@ public class EnemyScript : MonoBehaviour
     }
     void Attack()
     {
-        player.hp--;
-        Debug.Log("Player health is currently: " + player.hp);
+        player.TakeDamage();
         Die(); //make this poolable later on.
     }
     public void Reset()
