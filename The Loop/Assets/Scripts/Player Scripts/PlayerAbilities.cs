@@ -7,6 +7,7 @@ public class PlayerAbilities : MonoBehaviour
     public Camera camera;
     public GameObject bullet;
     public CameraShake cameraShake;
+    private bool screenShakeOn = true;
 
     [Header("Stats")]
     public float firerate = 0.75f;
@@ -40,6 +41,21 @@ public class PlayerAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var doOnce = true;
+        if (Input.GetKeyUp("c"))
+        {
+            if (screenShakeOn && doOnce)
+            {
+                doOnce = false;
+                screenShakeOn = false;
+            }
+            if (!screenShakeOn && doOnce)
+            {
+                doOnce = false;
+                screenShakeOn = true;
+            }
+        }
+
         firerateTimmer = Mathf.Clamp(firerateTimmer - Time.deltaTime, 0, 1000);
         if (Input.GetMouseButton(0) && firerateTimmer <= 0)
         {
@@ -50,7 +66,7 @@ public class PlayerAbilities : MonoBehaviour
             staffState = 1;
             staffStacks = 0;
             countDown = staffInitialDrawBackTime;
-            StartCoroutine(cameraShake.Shake(shootScreenShakeDuration, shootScreenShakeStrength));
+            if (screenShakeOn) { StartCoroutine(cameraShake.Shake(shootScreenShakeDuration, shootScreenShakeStrength)); }
         }
         countDown = Mathf.Clamp(countDown - Time.deltaTime, 0, 1000);
         float actualStaffSpeed = 0;
@@ -78,6 +94,6 @@ public class PlayerAbilities : MonoBehaviour
     public void TakeDamage()
     {
         hp--;
-        StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));
+        if (screenShakeOn){StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));}
     }
 }
