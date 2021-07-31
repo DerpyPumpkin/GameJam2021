@@ -96,11 +96,12 @@ public class EnemyScript : MonoBehaviour
         transform.position = startPos;
         transform.eulerAngles = startRot;
         isAggro = false;
+        gameObject.SetActive(true);
     }
     void Die()
     {
         if (player.hp < player.maxHp) { player.hp += 1; }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     void OnTriggerEnter(Collider other)
     {
