@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5334526855428019470}
   - component: {fileID: 5334526855428019469}
   - component: {fileID: 5334526855428019468}
-  - component: {fileID: 5334526855428019467}
+  - component: {fileID: 6324150633383120468}
   m_Layer: 0
-  m_Name: FlyingEnemy
+  m_Name: Blank Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!114 &5334526855428019467
+--- !u!114 &6324150633383120468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5334526855428019466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacd840e2449d4d408b3a5c5f7e08dc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 67ff213815c8b6440af0c5b822b1082c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  movementSpeed: 10
+  maxHealth: 4
+  movementSpeed: 13
   rotationSpeed: 10
+  firerate: 1
+  bullet: {fileID: 0}
+  isShootie: 0
+  isChasie: 1
+  isAggro: 0
   searchDistance: 12
   attackDistance: 2

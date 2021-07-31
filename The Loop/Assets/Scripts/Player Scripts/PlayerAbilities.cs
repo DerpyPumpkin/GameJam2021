@@ -10,7 +10,7 @@ public class PlayerAbilities : MonoBehaviour
     public float firerate = 0.75f;
     private float firerateTimmer = 0f;
     public int hp = 100;
-    private int maxHp;
+    public int maxHp;
 
     public GameObject staff;
     public float staffForwardTime;
