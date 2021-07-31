@@ -11,6 +11,7 @@ public class FlyingEnemy : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float searchDistance;
     [SerializeField] float attackDistance;
+    [SerializeField] bool isAggro = false;
     PlayerAbilities player;
     // Start is called before the first frame update
     void Awake()
@@ -22,15 +23,14 @@ public class FlyingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) < searchDistance)
+        if(Vector3.Distance(transform.position, player.transform.position) < searchDistance || currentHealth < maxHealth || isAggro)
         {
             transform.LookAt(player.transform.position);
             transform.Translate(0,0,movementSpeed * Time.deltaTime);
         }
-        if(Vector3.Distance(transform.position, player.transform.position) < attackDistance)
+        if(Vector3.Distance(transform.position, player.transform.position) < attackDistance )
         {
             Attack();
-
         }
     }
     public void TakeDamage()
