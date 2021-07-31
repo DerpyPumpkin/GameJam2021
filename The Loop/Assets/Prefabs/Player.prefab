@@ -239,10 +239,12 @@ MonoBehaviour:
   firerate: 0.5
   hp: 100
   staff: {fileID: 7052069797686211152}
-  staffForwardTime: 1
-  staffInitialDrawBackTime: 1
-  staffDrawBackTime: 1
-  staffForwardSpeed: 5
+  staffForwardTime: 0.25
+  staffInitialDrawBackTime: 0.15
+  staffDrawBackTime: 0.15
+  staffInitialDrawBackSpeed: 1
+  staffForwardSpeed: 6
+  staffDrawBackSpeed: 1
 --- !u!1 &6058634588838712729
 GameObject:
   m_ObjectHideFlags: 0
