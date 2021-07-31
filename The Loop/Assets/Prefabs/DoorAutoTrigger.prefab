@@ -111,3 +111,5 @@ MonoBehaviour:
   door: {fileID: 0}
   disableRooms: 1
   roomList: []
+  doorCloseTime: 2.3
+  roomEnemies: []
