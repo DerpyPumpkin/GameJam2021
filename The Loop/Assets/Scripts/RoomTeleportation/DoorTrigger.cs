@@ -12,8 +12,13 @@ public class DoorTrigger : MonoBehaviour
     public bool disableRooms;
     public GameObject[] roomList;
     private int listLengt;
-
+    private float doorTime = 0f;
+    public float doorCloseTime = 2.3f;
+    private bool startTimer = false;
     //Room Disabeling End
+
+    public EnemyScript[] roomEnemies;
+    private int enemyCount;
 
     void Start()
     {
@@ -21,29 +26,54 @@ public class DoorTrigger : MonoBehaviour
         doorAnimator = door.GetComponent<Animator>();
 
         listLengt = roomList.Length;
+        enemyCount = roomEnemies.Length;
     }
 
 
     void Update()
     {
-        
+        if (startTimer)
+        {
+            doorTime += Time.deltaTime;
+            if(doorTime == doorCloseTime)
+            {
+                DisabelRooms();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject == player)
+        if (collision.gameObject == player)
         {
             doorAnimator.Play("CloseDoor");
-            Debug.Log("Ping");
+            startTimer = true;
+            AggroEnemies();
         }
 
-        if(disableRooms)
+    }
+
+    void DisabelRooms()
+    {
+        doorTime = 0;
+
+        if (disableRooms)
         {
-            for(int i = 0; i < listLengt; i++)
+            for (int i = 0; i < listLengt; i++)
             {
                 Debug.Log(i);
                 roomList[i].SetActive(false);
             }
+        }
+        
+
+    }
+
+    void AggroEnemies()
+    {
+        for (int i = 0; i < enemyCount; i++)
+        {
+            roomEnemies[i].isAggro = true;
         }
     }
 }
