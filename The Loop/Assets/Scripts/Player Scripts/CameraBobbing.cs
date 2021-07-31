@@ -37,7 +37,6 @@ public class CameraBobbing : MonoBehaviour
         {
             if (CameraBobOn)
             {
-                Debug.LogError("mvoing");
                 //Player is moving
                 timer += Time.deltaTime * walkingBobbingSpeed;
                 transform.localPosition = new Vector3(transform.localPosition.x, defaultPosY + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
@@ -45,7 +44,6 @@ public class CameraBobbing : MonoBehaviour
         }
         else
         {
-            Debug.LogError("idle");
             //Idle
             timer = 0;
             transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), transform.localPosition.z);
