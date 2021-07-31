@@ -17,6 +17,14 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            mouseSensitivity -= 200f;
+}
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            mouseSensitivity += 200f;
+        }
 
         float mouse_x = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouse_y = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
