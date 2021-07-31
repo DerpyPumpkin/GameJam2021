@@ -6,12 +6,16 @@ public class PlayerAbilities : MonoBehaviour
 {
     public Camera camera;
     public GameObject bullet;
+    public CameraShake cameraShake;
 
+    [Header("Stats")]
     public float firerate = 0.75f;
     private float firerateTimmer = 0f;
     public int hp = 100;
+    [HideInInspector]
     public int maxHp;
 
+    [Header("Visual & Effects")]
     public GameObject staff;
     public float staffForwardTime;
     public float staffInitialDrawBackTime;
@@ -23,6 +27,10 @@ public class PlayerAbilities : MonoBehaviour
     public float staffDrawBackSpeed = 5f;
     private int staffState = 0;
     private float staffY;
+    public float shootScreenShakeStrength;
+    public float shootScreenShakeDuration;
+    public float damagedScreenShakeStrength;
+    public float damagedScreenShakeDuration;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +41,7 @@ public class PlayerAbilities : MonoBehaviour
     void Update()
     {
         firerateTimmer = Mathf.Clamp(firerateTimmer - Time.deltaTime, 0, 1000);
-        if (Input.GetMouseButton(0) && firerateTimmer == 0)
+        if (Input.GetMouseButton(0) && firerateTimmer <= 0)
         {
             firerateTimmer = firerate;
             GameObject bulletObject = Instantiate(bullet);
@@ -42,6 +50,7 @@ public class PlayerAbilities : MonoBehaviour
             staffState = 1;
             staffStacks = 0;
             countDown = staffInitialDrawBackTime;
+            StartCoroutine(cameraShake.Shake(shootScreenShakeDuration, shootScreenShakeStrength));
         }
         countDown = Mathf.Clamp(countDown - Time.deltaTime, 0, 1000);
         float actualStaffSpeed = 0;
@@ -64,5 +73,11 @@ public class PlayerAbilities : MonoBehaviour
             }
             staff.transform.position += staff.transform.up * actualStaffSpeed * Time.deltaTime;
         }
+    }
+
+    public void TakeDamage()
+    {
+        hp--;
+        StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));
     }
 }
