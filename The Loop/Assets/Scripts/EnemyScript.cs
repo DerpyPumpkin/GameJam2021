@@ -105,7 +105,11 @@ public class EnemyScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bullet") TakeDamage();
+        if (other.gameObject.tag == "Bullet")
+        {
+            TakeDamage();
+            Destroy(other);
+        }
     }
 
     void OnDrawGizmos()

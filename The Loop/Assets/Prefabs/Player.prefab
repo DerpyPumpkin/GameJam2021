@@ -247,14 +247,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187d51c46f00dce43b3e0894607b7d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  camera: {fileID: 6058634587527652275}
   bullet: {fileID: 8676366052171685609, guid: b92e295cb8f4921478af301f5f8d97e1, type: 3}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 3400400363328418855}
   firerate: 0.5
   hp: 5
   maxHp: 0
   staff: {fileID: 7052069797686211152}
-  staffForwardTime: 3.06
+  staffForwardTime: 0
   staffInitialDrawBackTime: 0.1
   staffDrawBackTime: 0.15
   staffInitialDrawBackSpeed: 13
