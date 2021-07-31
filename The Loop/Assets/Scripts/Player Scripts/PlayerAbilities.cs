@@ -6,12 +6,15 @@ public class PlayerAbilities : MonoBehaviour
 {
     public Camera camera;
     public GameObject bullet;
+
     public float firerate = 0.75f;
     private float firerateTimmer = 0;
+    public int hp = 100;
+    private int maxHp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxHp = hp;   
     }
 
     // Update is called once per frame
