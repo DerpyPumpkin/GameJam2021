@@ -38,11 +38,15 @@ public class EnemyScript : MonoBehaviour
         player = FindObjectOfType<PlayerAbilities>();
         cameraShake = FindObjectOfType<CameraShake>();
         currentHealth = maxHealth;
+
+        movementSpeed *= Random.Range(0.85f, 1.05f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth <= 0) Die();
+
         if (reset)
         {
             reset = false;
@@ -82,7 +86,6 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
-        if (currentHealth <= 0) Die();
     }
     void Attack()
     {
