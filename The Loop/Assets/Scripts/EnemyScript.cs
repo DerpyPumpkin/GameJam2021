@@ -23,8 +23,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject bullet;
     public CameraShake cameraShake;
 
-    bool isAggro = false;
-    bool reset = false;
+    public bool isAggro = false;
+    public bool reset = false;
     Vector3 startPos;
     Vector3 startRot;
 
@@ -87,7 +87,7 @@ public class EnemyScript : MonoBehaviour
     void Attack()
     {
         player.TakeDamage();
-        Die(); //make this poolable later on.
+        currentHealth = 0;
     }
     public void Reset()
     {
