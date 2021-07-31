@@ -19,6 +19,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             GameObject bulletObject = Instantiate(bullet);
             bulletObject.transform.position = camera.transform.position + camera.transform.forward;
+            //bulletObject.transform.forward
         }
     }
 }
