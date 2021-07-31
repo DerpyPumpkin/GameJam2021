@@ -626,6 +626,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1871013999202308871, guid: 22836233631605e41bcdf9e27621060e, type: 3}
+      propertyPath: staffForwardTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871013999202308871, guid: 22836233631605e41bcdf9e27621060e, type: 3}
+      propertyPath: staffForwardSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871013999202308871, guid: 22836233631605e41bcdf9e27621060e, type: 3}
+      propertyPath: staffDrawBackSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871013999202308871, guid: 22836233631605e41bcdf9e27621060e, type: 3}
+      propertyPath: staffInitialDrawBackSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6058634588685321200, guid: 22836233631605e41bcdf9e27621060e, type: 3}
       propertyPath: m_Name
       value: Player
