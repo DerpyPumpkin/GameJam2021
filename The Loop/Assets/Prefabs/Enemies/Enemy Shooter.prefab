@@ -9,11 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5334526855428019466, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy Shooter
       objectReference: {fileID: 0}
     - target: {fileID: 5334526855428019467, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: maxHealth
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334526855428019470, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334526855428019470, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5334526855428019472, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 8676366052171685609, guid: bb9b9076aa4bc1d49929e0183494584a, type: 3}
     - target: {fileID: 6324150633383120468, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: firerate
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6324150633383120468, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: isChasie

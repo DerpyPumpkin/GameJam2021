@@ -11,18 +11,20 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float firerate;
     float firerateTimmer = 0f;
-    [SerializeField] GameObject bullet;
-
-    [Header("Enemy Type")]
-    [SerializeField] bool isShootie;
-    [SerializeField] bool isChasie;
+    
 
     [Header("Enemy AI")]
-    [SerializeField] bool isAggro = false;
+    [SerializeField] bool isShootie;
+    [SerializeField] bool isChasie;
     [SerializeField] float searchDistance;
     [SerializeField] float attackDistance;
 
-    bool reset = false;
+    [Header("Other")]
+    [SerializeField] GameObject bullet;
+    public CameraShake cameraShake;
+
+    public bool isAggro = false;
+    public bool reset = false;
     Vector3 startPos;
     Vector3 startRot;
 
@@ -34,12 +36,17 @@ public class EnemyScript : MonoBehaviour
         startRot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
 
         player = FindObjectOfType<PlayerAbilities>();
+        cameraShake = FindObjectOfType<CameraShake>();
         currentHealth = maxHealth;
+
+        movementSpeed *= Random.Range(0.85f, 1.05f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth <= 0) Die();
+
         if (reset)
         {
             reset = false;
@@ -79,13 +86,11 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
-        if (currentHealth <= 0) Die();
     }
     void Attack()
     {
-        player.hp--;
-        Debug.Log("Player health is currently: " + player.hp);
-        Die(); //make this poolable later on.
+        player.TakeDamage();
+        currentHealth = 0;
     }
     public void Reset()
     {
@@ -94,15 +99,20 @@ public class EnemyScript : MonoBehaviour
         transform.position = startPos;
         transform.eulerAngles = startRot;
         isAggro = false;
+        gameObject.SetActive(true);
     }
     void Die()
     {
         if (player.hp < player.maxHp) { player.hp += 1; }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bullet") TakeDamage();
+        if (other.gameObject.tag == "Bullet")
+        {
+            TakeDamage();
+            Destroy(other);
+        }
     }
 
     void OnDrawGizmos()
