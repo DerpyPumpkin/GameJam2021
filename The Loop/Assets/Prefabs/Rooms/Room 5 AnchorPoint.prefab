@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 7328406595576055166}
   m_Layer: 0
   m_Name: DoorFrame (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38072,6 +38072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
 --- !u!1 &7598367695873742426 stripped
@@ -38138,6 +38142,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
       propertyPath: m_Name
       value: Pillar2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
@@ -39165,6 +39173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
 --- !u!4 &7077692162029948950 stripped
@@ -39761,6 +39773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
 --- !u!4 &7077692161850176463 stripped
@@ -39979,6 +39995,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
       propertyPath: m_Name
       value: Pillar2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9feefcecc8bddc94986b5e13b7f884b4, type: 3}
