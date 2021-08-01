@@ -51,4 +51,12 @@ public class RoomManagerScript : MonoBehaviour
             Debug.Log("Reset Enemy " + i);
         }
     }
+
+    public void AggroEnemies()
+    {
+        for (int i = 0; i < enemyCount; i++)
+        {
+            roomEnemies[i].isAggro = true;
+        }
+    }
 }

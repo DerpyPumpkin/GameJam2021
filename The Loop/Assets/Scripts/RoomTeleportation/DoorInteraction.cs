@@ -79,7 +79,7 @@ public class DoorInteraction : MonoBehaviour
                 }
 
 
-                doorAnimator.Play("OpenDoor");
+                doorAnimator.Play("DoorOpen");
 
                 triggerBlock.SetActive(false);//Deactivate TriggerBlock
             }
