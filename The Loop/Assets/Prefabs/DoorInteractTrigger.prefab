@@ -108,9 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b625fbc188cdbeb4f9d7b554961b4413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDispay: {fileID: 0}
+  interactDisplay: {fileID: 0}
   triggerBlock: {fileID: 7094517408713515777}
   teleportRooms: 1
   door: {fileID: 0}
   corridorAnchorpoint: {fileID: 0}
   nextRoomAnchorpoint: {fileID: 0}
+  nextRoomEnemies:
+  - {fileID: 0}
