@@ -34,12 +34,16 @@ public class DoorTrigger : MonoBehaviour
 
     void Update()
     {
+        
         if (startTimer)
         {
+            //Debug.Log("startTimer" + doorTime);
             doorTime += Time.deltaTime;
-            if(doorTime == doorCloseTime)
+            if(doorTime >= doorCloseTime)
             {
+                Debug.Log("Close Door");
                 DisabelRooms();
+
             }
         }
     }
@@ -62,13 +66,15 @@ public class DoorTrigger : MonoBehaviour
     void DisabelRooms()
     {
         doorTime = 0;
-
+        Debug.Log("RunDisable");
         if (disableRooms)
         {
+            Debug.Log("If Disable");
             for (int i = 0; i < listLengt; i++)
             {
                 Debug.Log(i);
                 roomList[i].SetActive(false);
+                Debug.Log("Disable done");
             }
         }
         

@@ -44,12 +44,11 @@ public class RoomManagerScript : MonoBehaviour
 
     public void ResetRooms()
     {
-        Debug.Log("Start Resetign enemies");
+
         for (int i = 0; i < enemyCount; i++)
         {
             roomEnemies[i].gameObject.SetActive(true);
             roomEnemies[i].Reset();
-            Debug.Log("Reset Enemy " + i);
         }
     }
 
