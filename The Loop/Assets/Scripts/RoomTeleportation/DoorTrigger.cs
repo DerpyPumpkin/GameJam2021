@@ -17,8 +17,10 @@ public class DoorTrigger : MonoBehaviour
     private bool startTimer = false;
     //Room Disabeling End
 
-    public EnemyScript[] roomEnemies;
+    //public EnemyScript[] roomEnemies;
     private int enemyCount;
+    public RoomManagerScript roomManager;
+    public bool aggroEnemies = true;
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class DoorTrigger : MonoBehaviour
         doorAnimator = door.GetComponent<Animator>();
 
         listLengt = roomList.Length;
-        enemyCount = roomEnemies.Length;
+        //enemyCount = roomEnemies.Length;
     }
 
 
@@ -46,9 +48,13 @@ public class DoorTrigger : MonoBehaviour
     {
         if (collision.gameObject == player)
         {
-            doorAnimator.Play("CloseDoor");
+            doorAnimator.Play("DoorClose");
             startTimer = true;
-            AggroEnemies();
+            if (aggroEnemies)
+            {
+                roomManager.AggroEnemies();
+            }
+            
         }
 
     }
@@ -69,11 +75,11 @@ public class DoorTrigger : MonoBehaviour
 
     }
 
-    void AggroEnemies()
+    /*void AggroEnemies()
     {
         for (int i = 0; i < enemyCount; i++)
         {
             roomEnemies[i].isAggro = true;
         }
-    }
+    }*/
 }

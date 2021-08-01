@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public float footStepTimer = 1;
+    private float startFootStepTimer;
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -22,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        startFootStepTimer = footStepTimer;
     }
 
     // Update is called once per frame
@@ -52,5 +55,12 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         
         controller.Move(velocity * Time.deltaTime);
+
+        footStepTimer = Mathf.Clamp(footStepTimer - Time.deltaTime, 0, 1000);
+        if (Input.GetKey("w") && footStepTimer <= 0 || Input.GetKey("s") && footStepTimer <= 0 || Input.GetKey("d") && footStepTimer <= 0 || Input.GetKey("a") && footStepTimer <= 0)
+        {
+            footStepTimer = startFootStepTimer;
+            FindObjectOfType<AudioManager>().Play("Player Foot Steps");
+        }
     }
 }

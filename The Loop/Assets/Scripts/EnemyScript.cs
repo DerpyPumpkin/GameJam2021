@@ -22,6 +22,7 @@ public class EnemyScript : MonoBehaviour
     [Header("Other")]
     [SerializeField] GameObject bullet;
     public CameraShake cameraShake;
+    [SerializeField] ParticleSystem bloodEffect;
 
     public bool isAggro = false;
     public bool reset = false;
@@ -87,6 +88,7 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
+        bloodEffect.Play();
     }
     void Attack()
     {

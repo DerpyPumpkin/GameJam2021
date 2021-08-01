@@ -32,10 +32,12 @@ public class PlayerAbilities : MonoBehaviour
     public float shootScreenShakeDuration;
     public float damagedScreenShakeStrength;
     public float damagedScreenShakeDuration;
+    UIManager uIManager;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         maxHp = hp;
+        uIManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -105,6 +107,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public void TakeDamage()
     {
+        uIManager.TakeDamage();
         hp--;
         if (screenShakeOn){StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));}
     }

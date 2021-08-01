@@ -757,6 +757,128 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1157027459898864393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2135325079961645495}
+    m_Modifications:
+    - target: {fileID: 4375607780603236649, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_Name
+      value: BloodParticleEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236662, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+--- !u!198 &3222288492946940478 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
+  m_PrefabInstance: {fileID: 1157027459898864393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6316924312398406823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,6 +966,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6324150633383120468, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
+      propertyPath: bloodEffect
+      value: 
+      objectReference: {fileID: 3222288492946940478}
     - target: {fileID: 6324150633383120468, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: movementSpeed
       value: 5
