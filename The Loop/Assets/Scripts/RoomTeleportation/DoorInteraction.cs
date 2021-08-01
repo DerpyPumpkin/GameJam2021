@@ -28,6 +28,8 @@ public class DoorInteraction : MonoBehaviour
     public RoomManagerScript roomManager;
     //Reset Rooms End
 
+    public DoorTrigger[] doorTriggerList;
+    private int doorlength;
 
     //Variables and Objects End
 
@@ -35,7 +37,7 @@ public class DoorInteraction : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         doorAnimator = door.GetComponent<Animator>();
-
+        doorlength = doorTriggerList.Length;
     }
 
     void Update()
@@ -74,6 +76,11 @@ public class DoorInteraction : MonoBehaviour
                     nextRoomAnchorpoint.transform.rotation = corridorAnchorpoint.transform.rotation;
                     //MOveNextRoomEnd
                     roomManager.ResetRooms();
+                    for(int i = 0; i < doorlength; i++)
+                    {
+                        doorTriggerList[i].startTimer = false;
+                        doorTriggerList[i].doorTime = 0f;
+                    }
 
                 }
 

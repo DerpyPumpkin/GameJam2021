@@ -12,9 +12,9 @@ public class DoorTrigger : MonoBehaviour
     public bool disableRooms;
     public GameObject[] roomList;
     private int listLengt;
-    private float doorTime = 0f;
+    public float doorTime = 0f;
     public float doorCloseTime = 2.3f;
-    private bool startTimer = false;
+    public bool startTimer = false;
     //Room Disabeling End
 
     //public EnemyScript[] roomEnemies;
