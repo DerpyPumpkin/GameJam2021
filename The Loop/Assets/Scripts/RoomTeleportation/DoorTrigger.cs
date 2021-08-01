@@ -43,6 +43,7 @@ public class DoorTrigger : MonoBehaviour
             {
                 Debug.Log("Close Door");
                 DisabelRooms();
+                startTimer = false;
 
             }
         }
@@ -74,6 +75,7 @@ public class DoorTrigger : MonoBehaviour
             {
                 Debug.Log(i);
                 roomList[i].SetActive(false);
+
                 Debug.Log("Disable done");
             }
         }
