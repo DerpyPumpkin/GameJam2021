@@ -361,6 +361,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  footStepTimer: 1
   moveDirection: {x: 0, y: 0, z: 0}
   canMove: 1
 --- !u!114 &1871013999202308871
@@ -379,7 +380,7 @@ MonoBehaviour:
   bullet: {fileID: 8676366052171685609, guid: b92e295cb8f4921478af301f5f8d97e1, type: 3}
   cameraShake: {fileID: 3400400363328418855}
   firerate: 0.5
-  hp: 5
+  hp: 4
   maxHp: 0
   staff: {fileID: 7052069797686211152}
   staffForwardTime: 0
