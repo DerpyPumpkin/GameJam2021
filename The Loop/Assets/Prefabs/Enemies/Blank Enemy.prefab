@@ -122,6 +122,7 @@ MonoBehaviour:
   attackDistance: 2
   bullet: {fileID: 0}
   cameraShake: {fileID: 0}
+  bloodEffect: {fileID: 4375607780603236663, guid: b2743373d46a51342b4837ad55a72980, type: 3}
   isAggro: 0
   reset: 0
 --- !u!135 &60255412887297035

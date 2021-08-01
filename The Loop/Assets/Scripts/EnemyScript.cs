@@ -22,6 +22,7 @@ public class EnemyScript : MonoBehaviour
     [Header("Other")]
     [SerializeField] GameObject bullet;
     public CameraShake cameraShake;
+    [SerializeField] ParticleSystem bloodEffect;
 
     public bool isAggro = false;
     public bool reset = false;
@@ -40,6 +41,7 @@ public class EnemyScript : MonoBehaviour
         currentHealth = maxHealth;
 
         movementSpeed *= Random.Range(0.85f, 1.05f);
+        firerate *= Random.Range(0.95f, 1.05f);
     }
 
     // Update is called once per frame
@@ -86,6 +88,7 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
+        bloodEffect.Play();
     }
     void Attack()
     {
