@@ -3755,7 +3755,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 249d5a8f6cab67a4fa9fcaa05b91cb5e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b6e4ce324e6df9f47a8260797a25babc, type: 2}
+      objectReference: {fileID: 2100000, guid: 44c71419dceb7e441bdf3eeb33e70443, type: 2}
     - target: {fileID: 919132149155446097, guid: 249d5a8f6cab67a4fa9fcaa05b91cb5e, type: 3}
       propertyPath: m_Name
       value: Hangingmoss (3)
