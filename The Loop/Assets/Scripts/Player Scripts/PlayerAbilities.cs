@@ -91,6 +91,15 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            TakeDamage();
+            Destroy(other);
+        }
+    }
+
     public void TakeDamage()
     {
         hp--;
