@@ -40,6 +40,7 @@ public class EnemyScript : MonoBehaviour
         currentHealth = maxHealth;
 
         movementSpeed *= Random.Range(0.85f, 1.05f);
+        firerate *= Random.Range(0.95f, 1.05f);
     }
 
     // Update is called once per frame
