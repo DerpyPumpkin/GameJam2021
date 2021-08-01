@@ -22,7 +22,7 @@ public class RoomManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < enemyCount; i++)
+        for (int i = 0; i < doorcount; i++)
         {
             doorInteractions[i].SetActive(true);
             /*if (roomEnemies[i].isActiveAndEnabled)
@@ -44,7 +44,7 @@ public class RoomManagerScript : MonoBehaviour
 
     public void ResetRooms()
     {
-        Debug.Log("Start Resetign enemies");
+        Debug.Log("Start Resetting enemies");
         for (int i = 0; i < enemyCount; i++)
         {
             roomEnemies[i].gameObject.SetActive(true);
