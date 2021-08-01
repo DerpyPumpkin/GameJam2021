@@ -97,6 +97,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             TakeDamage();
             Destroy(other);
+            FindObjectOfType<AudioManager>().Play("Player Hit");
         }
     }
 
