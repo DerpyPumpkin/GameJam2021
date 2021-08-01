@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAbilities : MonoBehaviour
 {
     public Camera camera;
+    Vector3 spawnPosition;
     public GameObject bullet;
     public CameraShake cameraShake;
     private bool screenShakeOn = true;
@@ -38,6 +40,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         maxHp = hp;
         uIManager = FindObjectOfType<UIManager>();
+        spawnPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -107,8 +110,16 @@ public class PlayerAbilities : MonoBehaviour
 
     public void TakeDamage()
     {
-        uIManager.TakeDamage();
         hp--;
+        Debug.Log("Health is currently: " + hp);
+        uIManager.TakeDamage(hp);
         if (screenShakeOn){StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));}
+        if(hp <= 0) 
+        {
+            Debug.Log("Dead!");
+            uIManager.Respawn();
+            hp = 3;
+            SceneManager.LoadScene(0);
+        }
     }
 }
