@@ -24,7 +24,8 @@ public class RoomManagerScript : MonoBehaviour
     {
         for (int i = 0; i < enemyCount; i++)
         {
-            if (roomEnemies[i].isActiveAndEnabled)
+            doorInteractions[i].SetActive(true);
+            /*if (roomEnemies[i].isActiveAndEnabled)
             {
                 for (int t = 0; t < doorcount; t++)
                 {
@@ -36,7 +37,7 @@ public class RoomManagerScript : MonoBehaviour
                 {
                     doorInteractions[t].SetActive(true);
                 }
-            }
+            }*/
         }
         
     }
