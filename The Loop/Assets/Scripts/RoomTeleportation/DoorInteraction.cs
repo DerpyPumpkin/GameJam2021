@@ -62,7 +62,6 @@ public class DoorInteraction : MonoBehaviour
     { 
         if(collision.gameObject == player)
         {
-            Debug.Log("In trigger");
             if (Input.GetAxisRaw("Interact")> 0)//Interect With Door
             {
                 interactDisplay.SetActive(false);//Deactivate Interactionpromt
@@ -81,7 +80,7 @@ public class DoorInteraction : MonoBehaviour
 
                 doorAnimator.Play("DoorOpen");
 
-                triggerBlock.SetActive(false);//Deactivate TriggerBlock
+                //triggerBlock.SetActive(false);//Deactivate TriggerBlock
             }
         }
     }
