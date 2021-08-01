@@ -17,15 +17,15 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void TakeDamage()
+    public void TakeDamage(int _currentHealth)
     {
-       /* for (int i = 3; i > _currentHealth; i--)
+       for (int i = 3; i > _currentHealth; i--)
         {
             Debug.Log("health is: " + i);
-            if(healthIconsGO[i].activeInHierarchy)
+            if(healthIconsGO[i-1].activeInHierarchy)
             healthIconsGO[i-1].SetActive(false);
-        }*/
-        //DamageOverlay.Play("DamageOverlayAnim");
+        }
+        DamageOverlay.Play("DamageOverlayAnim");
     }
     public void WinScreen()
     {

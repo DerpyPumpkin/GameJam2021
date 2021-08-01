@@ -112,7 +112,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         hp--;
         Debug.Log("Health is currently: " + hp);
-        //uIManager.TakeDamage(hp);
+        uIManager.TakeDamage(hp);
         if (screenShakeOn){StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));}
         if(hp <= 0) 
         {

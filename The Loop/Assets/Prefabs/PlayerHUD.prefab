@@ -1055,7 +1055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreenGO: {fileID: 4712003109291429591}
-  healthIconsGO: []
+  healthIconsGO:
+  - {fileID: 2555625068078500656}
+  - {fileID: 996904928805034007}
+  - {fileID: 8545616987320583508}
 --- !u!1 &5841525249649021596
 GameObject:
   m_ObjectHideFlags: 0
