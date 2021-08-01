@@ -764,6 +764,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60255412887297035, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5334526855428019466, guid: fd92553df98497e499c3c34d3d4d03e8, type: 3}
       propertyPath: m_Name
       value: EnemyQuickie
