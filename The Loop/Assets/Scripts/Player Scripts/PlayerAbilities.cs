@@ -66,6 +66,8 @@ public class PlayerAbilities : MonoBehaviour
             staffState = 1;
             staffStacks = 0;
             countDown = staffInitialDrawBackTime;
+            //Audio Visual
+            FindObjectOfType<AudioManager>().Play("Player Shoot");
             if (screenShakeOn) { StartCoroutine(cameraShake.Shake(shootScreenShakeDuration, shootScreenShakeStrength)); }
         }
         countDown = Mathf.Clamp(countDown - Time.deltaTime, 0, 1000);
@@ -97,6 +99,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             TakeDamage();
             Destroy(other);
+            FindObjectOfType<AudioManager>().Play("Player Hit");
         }
     }
 

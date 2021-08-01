@@ -112,6 +112,7 @@ public class EnemyScript : MonoBehaviour
         {
             TakeDamage();
             Destroy(other);
+            FindObjectOfType<AudioManager>().Play("Enemy Hit");
         }
     }
 
