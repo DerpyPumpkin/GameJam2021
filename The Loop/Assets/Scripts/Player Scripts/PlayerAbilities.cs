@@ -112,13 +112,11 @@ public class PlayerAbilities : MonoBehaviour
     {
         hp--;
         Debug.Log("Health is currently: " + hp);
-        uIManager.TakeDamage(hp);
+        //uIManager.TakeDamage(hp);
         if (screenShakeOn){StartCoroutine(cameraShake.Shake(damagedScreenShakeDuration, damagedScreenShakeStrength));}
         if(hp <= 0) 
         {
             Debug.Log("Dead!");
-            uIManager.Respawn();
-            hp = 3;
             SceneManager.LoadScene(0);
         }
     }

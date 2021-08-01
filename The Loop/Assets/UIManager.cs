@@ -7,8 +7,9 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     PlayerAbilities player;
     List<GameObject> hearts;
-    Animation DamageOverlay;
+    Animation DamageOverlay; 
     [SerializeField] GameObject winScreenGO;
+    [SerializeField] List<GameObject> healthIconsGO;
     void Awake()
     {
         DamageOverlay = this.GetComponent<Animation>();
@@ -16,17 +17,15 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Start()
-    {
-        for(int i = 0; i < hearts.Count; i++)
-        {
-            //if(hearts[i].activeInHierarchy == true)
-        }
-
-    }
     public void TakeDamage()
     {
-        DamageOverlay.Play("DamageOverlayAnim");
+       /* for (int i = 3; i > _currentHealth; i--)
+        {
+            Debug.Log("health is: " + i);
+            if(healthIconsGO[i].activeInHierarchy)
+            healthIconsGO[i-1].SetActive(false);
+        }*/
+        //DamageOverlay.Play("DamageOverlayAnim");
     }
     public void WinScreen()
     {
