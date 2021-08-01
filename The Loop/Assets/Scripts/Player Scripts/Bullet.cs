@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public float range = 2f;
     private float rangeTimmer = 0;
+    private bool destroyOnHit = true;
 
 
     // Start is called before the first frame update
@@ -26,4 +27,13 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
