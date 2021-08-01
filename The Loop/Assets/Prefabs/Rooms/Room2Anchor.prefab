@@ -3103,7 +3103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ffe80467422f23e4b86fbfecdfea52fc, type: 2}
+  - {fileID: 2100000, guid: b5bc55dbae92cd54fa46130a3c4f0558, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4329,7 +4329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ffe80467422f23e4b86fbfecdfea52fc, type: 2}
+  - {fileID: 2100000, guid: b5bc55dbae92cd54fa46130a3c4f0558, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7785,6 +7785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656991523852602940}
     m_Modifications:
+    - target: {fileID: 29797104840207091, guid: be055b16f44b5624480e3f225a93e284, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2135325079961645485, guid: be055b16f44b5624480e3f225a93e284, type: 3}
       propertyPath: m_Name
       value: EnemyChonko
