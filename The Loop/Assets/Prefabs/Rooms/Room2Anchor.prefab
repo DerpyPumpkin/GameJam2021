@@ -7785,6 +7785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656991523852602940}
     m_Modifications:
+    - target: {fileID: 29797104840207091, guid: be055b16f44b5624480e3f225a93e284, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2135325079961645485, guid: be055b16f44b5624480e3f225a93e284, type: 3}
       propertyPath: m_Name
       value: EnemyChonko
