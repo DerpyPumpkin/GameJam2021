@@ -48,4 +48,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d5cf6fab8aaea5a418db4175d1b84554, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Hit
+    clip: {fileID: 8300000, guid: f81d672d7fcead644bd172ee3fea729b, type: 3}
+    volume: 0.503
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Shoot
+    clip: {fileID: 8300000, guid: f95d5e79176eb8543ac2ed7b361d927c, type: 3}
+    volume: 0.503
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
