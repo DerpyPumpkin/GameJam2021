@@ -25,9 +25,7 @@ public class DoorInteraction : MonoBehaviour
     //Ancorpoint End
 
     //Reset Rooms Start
-    public EnemyScript[] nextRoomEnemies;
-    private int enemyCount;
-
+    public RoomManagerScript roomManager;
     //Reset Rooms End
 
 
@@ -37,7 +35,7 @@ public class DoorInteraction : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         doorAnimator = door.GetComponent<Animator>();
-        enemyCount = nextRoomEnemies.Length;
+
     }
 
     void Update()
@@ -76,7 +74,7 @@ public class DoorInteraction : MonoBehaviour
                     nextRoomAnchorpoint.transform.position = corridorAnchorpoint.transform.position;
                     nextRoomAnchorpoint.transform.rotation = corridorAnchorpoint.transform.rotation;
                     //MOveNextRoomEnd
-                    ResetRooms();
+                    roomManager.ResetRooms();
 
                 }
 
@@ -88,16 +86,6 @@ public class DoorInteraction : MonoBehaviour
         }
     }
 
-    void ResetRooms()
-    {
-        Debug.Log("Start Resetign enemies");
-        for (int i = 0; i < enemyCount; i++)
-        {
-            nextRoomEnemies[i].gameObject.SetActive(true);
-            nextRoomEnemies[i].Reset();
-            Debug.Log("Reset Enemy " + i );
-        }
-    }
 
 
 
