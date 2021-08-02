@@ -33,8 +33,8 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        startRot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
+        startPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+        startRot = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
 
         player = FindObjectOfType<PlayerAbilities>();
         cameraShake = FindObjectOfType<CameraShake>();
@@ -99,10 +99,12 @@ public class EnemyScript : MonoBehaviour
     {
         firerateTimmer = 0f;
         currentHealth = maxHealth;
-        transform.position = startPos;
-        transform.eulerAngles = startRot;
+        transform.localPosition = startPos;
+        transform.localEulerAngles = startRot;
         isAggro = false;
         gameObject.SetActive(true);
+
+
     }
     void Die()
     {
