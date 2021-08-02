@@ -120,4 +120,13 @@ public class PlayerAbilities : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+    public void GainHealth()
+    {
+        if(hp < maxHp)
+        {
+            hp++;
+            Debug.Log("Health is currently: " + hp);
+            uIManager.GainHealth(hp);
+        }
+    }
 }

@@ -47,7 +47,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth <= 0) Die();
+        if (currentHealth <= 0) Die(false);
 
         if (reset)
         {
@@ -93,7 +93,7 @@ public class EnemyScript : MonoBehaviour
     void Attack()
     {
         player.TakeDamage();
-        currentHealth = 0;
+        Die(true);
     }
     public void Reset()
     {
@@ -103,12 +103,13 @@ public class EnemyScript : MonoBehaviour
         transform.localEulerAngles = startRot;
         isAggro = false;
         gameObject.SetActive(true);
-
-
     }
-    void Die()
+    void Die(bool _cameFromAttack)
     {
-        if (player.hp < player.maxHp) { player.hp += 1; }
+        if(!_cameFromAttack) 
+        {
+            player.GainHealth();
+        }
         gameObject.SetActive(false);
     }
     void OnTriggerEnter(Collider other)
